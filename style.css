@@ -1,0 +1,230 @@
+body {
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(to bottom, #333, #666); /* Fondo degradado en grises */
+    color: white; /* Cambia el color del texto para que sea legible en fondos oscuros */
+}
+.Inputdiv{
+    display:inline-block;
+    vertical-align: top;
+}
+.Outputdiv{
+    display:inline-block;
+}
+
+.inputoutside{
+    display:inline-block;
+    vertical-align:top;
+}
+.outputoutside{
+    display:inline-block;
+    vertical-align:top;
+}
+
+p{
+    width: 300px;
+    color: #3498db; /* Color azul claro */
+    font-size: 25px;
+    font-style: italic;
+    padding: 10px;
+    margin: 10px;
+    margin: auto;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombreado suave */
+}
+p2{
+    width:300px;
+    color:black;
+    font-size:25px;
+    font-style:italic;
+    padding:10px;
+    margin:10px;
+    
+    margin:auto;
+    font-weight: bold;
+}
+p4{
+    font: 150% sans-serif;
+}
+p5{
+    font: 150% sans-serif;
+}
+
+h1 {
+    margin: 0px;
+    border: 0px;
+    padding: 30px;
+    text-align: center;
+    font: bold 350% sans-serif;
+    position: relative;
+    color: red; /* Color del texto rojo */
+
+}
+
+h1::before {
+    content: attr(data-text); /* Usa el atributo data-text como contenido del pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white; /* Color del texto blanco para simular el relleno */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del texto original */
+    mix-blend-mode: screen; /* Mezcla el pseudo-elemento con el fondo */
+}
+
+/* Aplica transición para un efecto más suave */
+h1:hover::before {
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+input[type=text]{
+    margin:10px;
+    padding:10px;
+    font-weight: bold;
+    font-size: 17px;
+    border:2px solid black;
+}
+lattext{
+    font-size:25px;
+    font-weight: bold;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 45px; 
+    background-color: #f1f1f1;
+    width:250px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+select{
+    font-size:20px;
+}
+
+#wp{
+    width:300px;
+    margin:20px;
+    padding:20px;
+    background:rgb(203, 201, 201);
+    font-size:30px;
+    text-align:center;
+}
+
+input[type=button] {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #ee6c4d, #ff9a40); /* Cambia los colores según tus preferencias */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+input[type=button]:hover {
+    background: linear-gradient(to right, #ff9a40, #ee6c4d); /* Cambia los colores según tus preferencias */
+}
+
+#wp {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, #dcdcdc, #f0f0f0); /* Puedes ajustar los colores según tus preferencias */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
+
+#wp::placeholder {
+    color: #888; /* Estilo para el texto de marcador de posición si es aplicable */
+}
+
+
+.input-item {
+    margin-bottom: 15px; /* Espacio entre los elementos */
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
+}
+
+
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type=text] {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+.plots{
+    width: 96vmin;
+    max-width:1500px;
+    margin:auto;
+}
+.plots2{
+    width: 96vmin;
+    max-width:1500px;
+    margin:auto;
+}
+form{
+    padding:10px;
+}
+
+.select-element {
+    margin-bottom: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.select-element label {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    color: #3498db; /* Color azul claro */
+}
+
+.select-element select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    appearance: none;
+}
+
+.select-element select:focus {
+    border-color: #2980b9; /* Cambia el color del borde cuando el elemento está enfocado */
+}
+
+.select-element select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Elimina el fondo degradado y aplica un fondo blanco uniforme */
+.select-element select {
+    background-image: none;
+}
