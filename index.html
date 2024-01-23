@@ -357,15 +357,15 @@
                 //let salud1 = life * 5;
                 let salud2 = (enemyvalue[quest] + increment) * 5;
                 let strength1 = strength;
-                let strength2 = enemyvalue[quest];
+                let strength2 = enemyvalue[quest] + increment;
                 let defense1 = defense;
-                let defense2 = enemyvalue[quest];
+                let defense2 = enemyvalue[quest] + increment;
                 let crit1 = crit;
-                let crit2 = enemyvalue[quest];
+                let crit2 = enemyvalue[quest] + increment;
                 let accuracy1 = accuracy;
-                let accuracy2 = enemyvalue[quest];
+                let accuracy2 = enemyvalue[quest] + increment;
                 let evasion1 = evasion;
-                let evasion2 = enemyvalue[quest];
+                let evasion2 = enemyvalue[quest] + increment;
                 let critprob1 = critprob;
                 let critprob2 = critvalue[quest];
                 let multdamage1 = elementCalculator(element1, element2);
@@ -406,12 +406,15 @@
                     let damageReceivedNormal1 = (attack2 - attack2 * defensebot1) * multdamage2;
                     let damageReceivedNormal2 = (attack1 - attack1 * defensebot2) * multdamage1;
 
+                    // Option 1: Damage multiplicator applied twice
                     //let damageReceivedCritical1 = (damageReceivedNormal1 + crit2) * multdamage2;
                     //let damageReceivedCritical2 = (damageReceivedNormal2 + crit1) * multdamage1;
-
+                    
+                    // Option 2: Damage multiplicator applied after critical
                     //let damageReceivedCritical1 = ((attack2 - attack2 * defensebot1) + crit2) * multdamage2;
                     //let damageReceivedCritical2 = ((attack1 - attack1 * defensebot2) + crit1) * multdamage1;
 
+                    // Option 3: Damage multiplicator applied before critical
                     let damageReceivedCritical1 = (damageReceivedNormal1 + crit2);
                     let damageReceivedCritical2 = (damageReceivedNormal2 + crit1);
 
@@ -557,15 +560,15 @@
                     //let salud1 = life * 5;
                     let salud2 = (enemyvalue[quest] + increment) * 5;
                     let strength1 = strength;
-                    let strength2 = enemyvalue[quest];
+                    let strength2 = enemyvalue[quest] + increment;
                     let defense1 = defense;
-                    let defense2 = enemyvalue[quest];
+                    let defense2 = enemyvalue[quest] + increment;
                     let crit1 = crit;
-                    let crit2 = enemyvalue[quest];
+                    let crit2 = enemyvalue[quest] + increment;
                     let accuracy1 = accuracy;
-                    let accuracy2 = enemyvalue[quest];
+                    let accuracy2 = enemyvalue[quest] + increment;
                     let evasion1 = evasion;
-                    let evasion2 = enemyvalue[quest];
+                    let evasion2 = enemyvalue[quest] + increment;
                     let critprob1 = critprob;
                     let critprob2 = critvalue[quest];
                     let multdamage1 = elementCalculator(element1, element2);
