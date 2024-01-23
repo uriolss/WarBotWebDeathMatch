@@ -406,8 +406,14 @@
                     let damageReceivedNormal1 = (attack2 - attack2 * defensebot1) * multdamage2;
                     let damageReceivedNormal2 = (attack1 - attack1 * defensebot2) * multdamage1;
 
-                    let damageReceivedCritical1 = (damageReceivedNormal1 + crit2) * multdamage2;
-                    let damageReceivedCritical2 = (damageReceivedNormal2 + crit1) * multdamage1;
+                    //let damageReceivedCritical1 = (damageReceivedNormal1 + crit2) * multdamage2;
+                    //let damageReceivedCritical2 = (damageReceivedNormal2 + crit1) * multdamage1;
+
+                    //let damageReceivedCritical1 = ((attack2 - attack2 * defensebot1) + crit2) * multdamage2;
+                    //let damageReceivedCritical2 = ((attack1 - attack1 * defensebot2) + crit1) * multdamage1;
+
+                    let damageReceivedCritical1 = (damageReceivedNormal1 + crit2);
+                    let damageReceivedCritical2 = (damageReceivedNormal2 + crit1);
 
                     let hitProb1 = 75 + (accuracy1 - evasion2) / 4.0;
                     let hitProb2 = 75 + (accuracy2 - evasion1) / 4.0;
@@ -601,8 +607,14 @@
                         let damageReceivedNormal1 = (attack2 - attack2 * defensebot1) * multdamage2;
                         let damageReceivedNormal2 = (attack1 - attack1 * defensebot2) * multdamage1;
 
-                        let damageReceivedCritical1 = (damageReceivedNormal1 + crit2) * multdamage2;
-                        let damageReceivedCritical2 = (damageReceivedNormal2 + crit1) * multdamage1;
+                        //let damageReceivedCritical1 = (damageReceivedNormal1 + crit2) * multdamage2;
+                        //let damageReceivedCritical2 = (damageReceivedNormal2 + crit1) * multdamage1;
+
+                        //let damageReceivedCritical1 = ((attack2 - attack2 * defensebot1) + crit2) * multdamage2;
+                        //let damageReceivedCritical2 = ((attack1 - attack1 * defensebot2) + crit1) * multdamage1;
+
+                        let damageReceivedCritical1 = (damageReceivedNormal1 + crit2);
+                        let damageReceivedCritical2 = (damageReceivedNormal2 + crit1);
 
                         let hitProb1 = 75 + (accuracy1 - evasion2) / 4.0;
                         let hitProb2 = 75 + (accuracy2 - evasion1) / 4.0;
